@@ -1,0 +1,459 @@
+{
+    "name": "my-theme",
+    "displayName": "My Theme",
+    "description": "Transform your coding experience with the perfect theme for your VS Code",
+    "icon": "img/my-theme.jpg",
+    "version": "0.0.1",
+    "publisher": "lucaskawatoko",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/seu-usuario/seu-repositorio"
+    },
+    "engines": {
+      "vscode": "^1.90.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [
+      "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+    "commands": [
+        {
+            "command": "extension.reloadWindow",
+            "title": "Reload Window"
+        }
+    ],
+      "configuration": {
+          "title": "Custom Theme Settings",
+          "properties": {
+              "customTheme.editor.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the editor"
+              },
+              "customTheme.editor.foreground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the editor"
+              },
+              "customTheme.editor.selectionBackground": {
+                  "type": "string",
+                  "default": "#272727",
+                  "description": "Background color of selected text in the editor"
+              },
+              "customTheme.panel.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the panel"
+              },
+              "customTheme.sideBar.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the side bar"
+              },
+              "customTheme.sideBar.foreground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the side bar"
+              },
+              "customTheme.sideBarTitle.foreground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the side bar title"
+              },
+              "customTheme.titleBar.activeBackground": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the active title bar"
+              },
+              "customTheme.titleBar.activeForeground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the active title bar"
+              },
+              "customTheme.titleBar.inactiveBackground": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the inactive title bar"
+              },
+              "customTheme.titleBar.inactiveForeground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the inactive title bar"
+              },
+              "customTheme.tab.activeBackground": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the active tab"
+              },
+              "customTheme.tab.activeForeground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the active tab"
+              },
+              "customTheme.tab.inactiveBackground": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the inactive tab"
+              },
+              "customTheme.tab.inactiveForeground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the inactive tab"
+              },
+              "customTheme.tab.border": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Border color of the tabs"
+              },
+              "customTheme.tab.activeBorderTop": {
+                  "type": "string",
+                  "default": "#0015ff",
+                  "description": "Border color of the top of the active tab"
+              },
+              "customTheme.sideBar.border": {
+                  "type": "string",
+                  "default": "#ff000000",
+                  "description": "Border color of the side bar"
+              },
+              "customTheme.activityBar.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the activity bar"
+              },
+              "customTheme.activityBar.foreground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the activity bar"
+              },
+              "customTheme.activityBar.border": {
+                  "type": "string",
+                  "default": "#91040400",
+                  "description": "Border color of the activity bar"
+              },
+              "customTheme.titleBar.border": {
+                  "type": "string",
+                  "default": "#ff000000",
+                  "description": "Border color of the title bar"
+              },
+              "customTheme.statusBar.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the status bar"
+              },
+              "customTheme.statusBar.foreground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the status bar"
+              },
+              "customTheme.gitDecoration.addedResourceForeground": {
+                  "type": "string",
+                  "default": "#ff0000",
+                  "description": "Foreground color of added Git resources"
+              },
+              "customTheme.gitDecoration.modifiedResourceForeground": {
+                  "type": "string",
+                  "default": "#ffee00",
+                  "description": "Foreground color of modified Git resources"
+              },
+              "customTheme.gitDecoration.deletedResourceForeground": {
+                  "type": "string",
+                  "default": "#ff0000",
+                  "description": "Foreground color of deleted Git resources"
+              },
+              "customTheme.gitDecoration.untrackedResourceForeground": {
+                  "type": "string",
+                  "default": "#00ff44",
+                  "description": "Foreground color of untracked Git resources"
+              },
+              "customTheme.gitDecoration.ignoredResourceForeground": {
+                  "type": "string",
+                  "default": "#7a7a7a",
+                  "description": "Foreground color of ignored Git resources"
+              },
+              "customTheme.editorIndentGuide.background1": {
+                  "type": "string",
+                  "default": "#FFFF40",
+                  "description": "Background color of editor indent guide level 1"
+              },
+              "customTheme.editorIndentGuide.background2": {
+                  "type": "string",
+                  "default": "#7FFF7F",
+                  "description": "Background color of editor indent guide level 2"
+              },
+              "customTheme.editorIndentGuide.background3": {
+                  "type": "string",
+                  "default": "#FF7FFF",
+                  "description": "Background color of editor indent guide level 3"
+              },
+              "customTheme.editorIndentGuide.background4": {
+                  "type": "string",
+                  "default": "#4FECED",
+                  "description": "Background color of editor indent guide level 4"
+              },
+              "customTheme.editorIndentGuide.activeBackground1": {
+                  "type": "string",
+                  "default": "#FFFF40",
+                  "description": "Background color of active editor indent guide level 1"
+              },
+              "customTheme.editorIndentGuide.activeBackground2": {
+                  "type": "string",
+                  "default": "#7FFF7F",
+                  "description": "Background color of active editor indent guide level 2"
+              },
+              "customTheme.editorIndentGuide.activeBackground3": {
+                  "type": "string",
+                  "default": "#FF7FFF",
+                  "description": "Background color of active editor indent guide level 3"
+              },
+              "customTheme.editorIndentGuide.activeBackground4": {
+                  "type": "string",
+                  "default": "#4FECED",
+                  "description": "Background color of active editor indent guide level 4"
+              },
+              "customTheme.terminal.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the terminal"
+              },
+              "customTheme.terminal.foreground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the terminal"
+              },
+              "customTheme.terminalCursor.background": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Background color of the terminal cursor"
+              },
+              "customTheme.terminalCursor.foreground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the terminal cursor"
+              },
+              "customTheme.terminal.ansiBlack": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "ANSI color black in the terminal"
+              },
+              "customTheme.terminal.ansiRed": {
+                  "type": "string",
+                  "default": "#FF0000",
+                  "description": "ANSI color red in the terminal"
+              },
+              "customTheme.terminal.ansiGreen": {
+                  "type": "string",
+                  "default": "#00FF00",
+                  "description": "ANSI color green in the terminal"
+              },
+              "customTheme.terminal.ansiYellow": {
+                  "type": "string",
+                  "default": "#FFFF00",
+                  "description": "ANSI color yellow in the terminal"
+              },
+              "customTheme.terminal.ansiBlue": {
+                  "type": "string",
+                  "default": "#0000FF",
+                  "description": "ANSI color blue in the terminal"
+              },
+              "customTheme.terminal.ansiMagenta": {
+                  "type": "string",
+                  "default": "#FF00FF",
+                  "description": "ANSI color magenta in the terminal"
+              },
+              "customTheme.terminal.ansiCyan": {
+                  "type": "string",
+                  "default": "#00FFFF",
+                  "description": "ANSI color cyan in the terminal"
+              },
+              "customTheme.terminal.ansiWhite": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "ANSI color white in the terminal"
+              },
+              "customTheme.terminal.ansiBrightBlack": {
+                  "type": "string",
+                  "default": "#7F7F7F",
+                  "description": "Bright ANSI color black in the terminal"
+              },
+              "customTheme.terminal.ansiBrightRed": {
+                  "type": "string",
+                  "default": "#FF7F7F",
+                  "description": "Bright ANSI color red in the terminal"
+              },
+              "customTheme.terminal.ansiBrightGreen": {
+                  "type": "string",
+                  "default": "#7FFF7F",
+                  "description": "Bright ANSI color green in the terminal"
+              },
+              "customTheme.terminal.ansiBrightYellow": {
+                  "type": "string",
+                  "default": "#FFFF7F",
+                  "description": "Bright ANSI color yellow in the terminal"
+              },
+              "customTheme.terminal.ansiBrightBlue": {
+                  "type": "string",
+                  "default": "#7F7FFF",
+                  "description": "Bright ANSI color blue in the terminal"
+              },
+              "customTheme.terminal.ansiBrightMagenta": {
+                  "type": "string",
+                  "default": "#FF7FFF",
+                  "description": "Bright ANSI color magenta in the terminal"
+              },
+              "customTheme.terminal.ansiBrightCyan": {
+                  "type": "string",
+                  "default": "#7FFFFF",
+                  "description": "Bright ANSI color cyan in the terminal"
+              },
+              "customTheme.terminal.ansiBrightWhite": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Bright ANSI color white in the terminal"
+              },
+              "customTheme.debugToolBar.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the debug toolbar"
+              },
+              "customTheme.debugConsole.infoForeground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of debug console info messages"
+              },
+              "customTheme.debugConsole.warningForeground": {
+                  "type": "string",
+                  "default": "#FFFF00",
+                  "description": "Foreground color of debug console warning messages"
+              },
+              "customTheme.debugConsole.errorForeground": {
+                  "type": "string",
+                  "default": "#FF0000",
+                  "description": "Foreground color of debug console error messages"
+              },
+              "customTheme.notification.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of notifications"
+              },
+              "customTheme.notification.foreground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of notifications"
+              },
+              "customTheme.notification.buttonBackground": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of notification buttons"
+              },
+              "customTheme.notification.buttonForeground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of notification buttons"
+              },
+              "customTheme.notification.buttonHoverBackground": {
+                  "type": "string",
+                  "default": "#272727",
+                  "description": "Background color of notification button on hover"
+              },
+              "customTheme.statusBar.noFolderBackground": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the status bar when no folder is opened"
+              },
+              "customTheme.statusBar.debuggingBackground": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the status bar when debugging"
+              },
+              "customTheme.statusBar.debuggingForeground": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Foreground color of the status bar when debugging"
+              },
+              "customTheme.editorBracketMatch.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of matching brackets in the editor"
+              },
+              "customTheme.editorBracketMatch.border": {
+                  "type": "string",
+                  "default": "#FFFFFF",
+                  "description": "Border color of matching brackets in the editor"
+              },
+              "customTheme.editorGutter.background": {
+                  "type": "string",
+                  "default": "#000000",
+                  "description": "Background color of the editor gutter"
+              },
+              "customTheme.editorGutter.modifiedBackground": {
+                  "type": "string",
+                  "default": "#ffee00",
+                  "description": "Background color of modified lines in the editor gutter"
+              },
+              "customTheme.editorGutter.addedBackground": {
+                  "type": "string",
+                  "default": "#00ff44",
+                  "description": "Background color of added lines in the editor gutter"
+              },
+              "customTheme.editorGutter.deletedBackground": {
+                  "type": "string",
+                  "default": "#ff0000",
+                  "description": "Background color of deleted lines in the editor gutter"
+              },
+              "customTheme.scrollbarSlider.background": {
+                  "type": "string",
+                  "default": "#272727",
+                  "description": "Background color of the scrollbar slider"
+              },
+              "customTheme.scrollbarSlider.hoverBackground": {
+                  "type": "string",
+                  "default": "#555555",
+                  "description": "Background color of the scrollbar slider on hover"
+              },
+              "customTheme.scrollbarSlider.activeBackground": {
+                  "type": "string",
+                  "default": "#777777",
+                  "description": "Background color of the scrollbar slider when active"
+              },
+              "statusBarCustomItem.text": {
+                "type": "string",
+                "default": "Lucas Kawatoko",
+                "description": "Custom Item Text (can be your name)"
+              },
+              "statusBarCustomItem.tooltip": {
+                "type": "string",
+                "default": "Este código do Visual Studio pertence a Lucas Kawatoko",
+                "description": "Custom Item Tooltip Text"
+              },
+              "statusBarCustomItem.icon": {
+                "type": "string",
+                "default": "",
+                "description": "Custom Item Icon"
+            }
+          }
+      }
+  },
+  "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src --ext ts",
+      "test": "vscode-test"
+  },
+  "devDependencies": {
+      "@types/vscode": "^1.90.0",
+      "@types/mocha": "^10.0.6",
+      "@types/node": "20.x",
+      "@typescript-eslint/eslint-plugin": "^7.11.0",
+      "@typescript-eslint/parser": "^7.11.0",
+      "eslint": "^8.57.0",
+      "typescript": "^5.4.5",
+      "@vscode/test-cli": "^0.0.9",
+      "@vscode/test-electron": "^2.4.0"
+  }
+}
