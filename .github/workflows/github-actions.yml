@@ -29,5 +29,5 @@ jobs:
       - name: Send Discord Webhook
         run: |
           curl -X POST -H "Content-Type: application/json" -d '{
-            "content": "<#1255824022353088572> 🚀 Uma nova versão do Flex Theme foi publicada! Clique [aqui](https://marketplace.visualstudio.com/items?itemName=lucaskawatoko.flexitheme) para conferir."
+            "content": "<@&1255824022353088572> 🚀 Uma nova versão do Flex Theme foi publicada! Clique [aqui](https://marketplace.visualstudio.com/items?itemName=lucaskawatoko.flexitheme) para conferir.Você também pode baixar colando este ID na aba de extensões do seu VS Code: `lucaskawatoko.flexitheme`"
           }' https://discord.com/api/webhooks/1255938489053089792/LgTUMCFrGBEeq86NdRjVJSi8RCndy-gIfhOGJORhdPUQTF4jp0L_6S5I83y8-P7wihmc
