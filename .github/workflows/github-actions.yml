@@ -1,0 +1,42 @@
+name: Deploy to VS Code Marketplace
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install VSCE
+        run: npm install -g vsce
+
+      - name: Check if version changed
+        id: check_version
+        run: |
+          echo "::set-output name=changed::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep 'package.json')"
+          echo "::set-output name=version::$(jq -r '.version' package.json)"
+
+      - name: Publish Extension
+        if: steps.check_version.outputs.changed && steps.check_version.outputs.version == '0.0.2'
+        run: |
+          vsce publish --pat ${{ secrets.VSCE_TOKEN }}
+
+      - name: Send Discord Webhook
+        if: steps.check_version.outputs.changed && steps.check_version.outputs.version == '0.0.2'
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{
+            "content": "<#1255824022353088572> 🚀 Uma nova versão do Flex Theme foi publicada! Clique [aqui](https://marketplace.visualstudio.com/items?itemName=lucaskawatoko.flexitheme) para conferir."
+          }' https://discord.com/api/webhooks/1255938489053089792/LgTUMCFrGBEeq86NdRjVJSi8RCndy-gIfhOGJORhdPUQTF4jp0L_6S5I83y8-P7wihmc

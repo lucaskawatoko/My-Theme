@@ -1,13 +1,17 @@
 {
-    "name": "my-theme",
-    "displayName": "My Theme",
+    "name": "flexitheme",
+    "displayName": "Flex Theme",
     "description": "Transform your coding experience with the perfect theme for your VS Code",
     "icon": "img/my-theme.jpg",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "publisher": "lucaskawatoko",
+    "author": {
+		"name": "Lucas Kawatoko",
+		"email": "lucaskawatoko@gmail.com"
+	},
     "repository": {
       "type": "git",
-      "url": "https://github.com/seu-usuario/seu-repositorio"
+      "url": "https://github.com/lucaskawatoko/My-Theme"
     },
     "engines": {
       "vscode": "^1.90.0"
@@ -15,6 +19,17 @@
     "categories": [
       "Other"
     ],
+    "keywords": [
+		"statusbar",
+		"status",
+		"custom",
+		"item",
+		"personalize",
+		"customizer",
+		"personal",
+        "theme-dark",
+        "dark"
+	],
     "activationEvents": [
       "onStartupFinished"
     ],
