@@ -24,14 +24,14 @@ Para qualquer dúvida, entre em nosso [Discord](https://discord.gg/vRRbJV5pcG).
 2. **Configuração**:
    - Use o comando `ctrl + ,`, vá em "Extensions" e depois em "Custom Theme Settings" conforme a imagem abaixo.
 
-![Exemplo do Flex Theme](https://cdn.discordapp.com/attachments/1099846034131259474/1255941780793327636/image.png?ex=667ef66e&is=667da4ee&hm=8657d9aba79771a304b522cce2a4d47b528a34a7f694ec4a5b1bb7f52fba24a5&)
+![Exemplo do Flex Theme](./img/config.png)
 
 3. **Customização**:
    - Explore as opções disponíveis para ajustar o tema de acordo com suas preferências.
   
 4. **Pré-Visualização**:
 
-![Exemplo do Flex Theme](https://cdn.discordapp.com/attachments/1099846034131259474/1255943312372793534/image.png?ex=667ef7db&is=667da65b&hm=e569780bb3e12ad70f283142869af56ee161261edbcebf2fea0d3313685fc9be&)
+![Exemplo do Flex Theme](./img/preview.png)
 
 5. **Documentação das configurações**
 
