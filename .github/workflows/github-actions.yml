@@ -23,19 +23,7 @@ jobs:
       - name: Install VSCE
         run: npm install -g vsce
 
-      - name: Check if version already exists
-        id: check-version
-        run: |
-          VERSION=$(cat package.json | jq -r '.version')
-          EXISTS=$(vsce show lucaskawatoko.flexitheme@$VERSION)
-          if [ "$EXISTS" ]; then
-            echo "::set-output name=exists::true"
-          else
-            echo "::set-output name=exists::false"
-          fi
-
       - name: Publish Extension
-        if: steps.check-version.outputs.exists == 'false'
         run: vsce publish --pat ${{ secrets.VSCE_TOKEN }}
 
       - name: Send Discord Webhook
@@ -43,4 +31,3 @@ jobs:
           curl -X POST -H "Content-Type: application/json" -d '{
             "content": "<@&1255824022353088572> 🚀 Uma nova versão do Flex Theme foi publicada! Clique [aqui](https://marketplace.visualstudio.com/items?itemName=lucaskawatoko.flexitheme) para conferir. Você também pode baixar colando este ID na aba de extensões do seu VS Code: `lucaskawatoko.flexitheme`"
           }' https://discord.com/api/webhooks/1255938489053089792/LgTUMCFrGBEeq86NdRjVJSi8RCndy-gIfhOGJORhdPUQTF4jp0L_6S5I83y8-P7wihmc
-        if: steps.check-version.outputs.exists == 'false'
